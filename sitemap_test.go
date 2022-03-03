@@ -1,9 +1,10 @@
 package sitemap_test
 
 import (
-	"github.com/snabb/sitemap"
 	"os"
 	"time"
+
+	"github.com/triadev/sitemap"
 )
 
 func Example() {

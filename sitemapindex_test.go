@@ -1,7 +1,7 @@
 package sitemap_test
 
 import (
-	"github.com/snabb/sitemap"
+	"github.com/triadev/sitemap"
 	"os"
 	"time"
 )
