@@ -44,7 +44,13 @@ type URL struct {
 // readable.
 type Sitemap struct {
 	XMLName xml.Name `xml:"urlset"`
-	Xmlns   string   `xml:"xmlns,attr"`
+	
+	Xmlns 		string   `xml:"xmlns,attr"`
+	XmlnsNews 	string `xml:"xmlns:news,attr"`
+	XmlnsXHTML	string `xml:"xmlns:xhtml,attr"`
+	XmlnsMobile 	string   `xml:"xmlns:mobile,attr"`
+	XmlnsImage 	string   `xml:"xmlns:image,attr"`
+	XmlnsVideo 	string   `xml:"xmlns:video,attr"`
 
 	URLs []*URL `xml:"url"`
 
@@ -55,6 +61,11 @@ type Sitemap struct {
 func New() *Sitemap {
 	return &Sitemap{
 		Xmlns: "http://www.sitemaps.org/schemas/sitemap/0.9",
+		XmlnsNews: "http://www.google.com/schemas/sitemap-news/0.9",
+		XmlnsXHTML: "http://www.w3.org/1999/xhtml",
+		XmlnsMobile: "http://www.google.com/schemas/sitemap-mobile/1.0",
+		XmlnsImage: "http://www.google.com/schemas/sitemap-image/1.1",
+		XmlnsVideo: "http://www.google.com/schemas/sitemap-video/1.1",
 		URLs:  make([]*URL, 0),
 	}
 }
